@@ -5,19 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B1前期 専門科目 - 過去問アーカイブ</title>
     <style>
-        /* index.htmlと共通のスタイル */
-        body { font-family: sans-serif; line-height: 1.8; max-width: 900px; margin: 0 auto; padding: 0; background-color: #fff; }
-        header { background-color: #02356E; color: #fff; padding: 20px; text-align: center; }
-        .container { padding: 20px; }
-        h2 { color: #02356E; border-bottom: 2px solid #02356E; }
+        body { 
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 0; 
+            background-color: #ffffff; 
+            color: #333;
+        }
+        header { 
+            background-color: #02356E; 
+            color: #ffffff; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .container { padding: 20px 30px; }
         
-        /* リストのスタイル */
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; padding: 10px; border: 1px solid #eee; border-radius: 5px; }
-        a { color: #02356E; font-weight: bold; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        /* 科目ごとのブロック */
+        .subject-block {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
         
-        .back-link { margin-top: 30px; display: block; }
+        /* 小見出し：[曜時限] 科目名（教授） */
+        h3 { 
+            color: #02356E; 
+            border-left: 5px solid #02356E; 
+            padding-left: 15px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        /* 過去問リンクのリスト */
+        ul { 
+            list-style: none; 
+            padding-left: 20px; 
+            display: flex; /* 横並びにする場合（お好みで） */
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        li { margin-bottom: 5px; }
+        
+        /* 年度リンクのスタイル */
+        .year-link {
+            display: inline-block;
+            background-color: #f0f4f8;
+            color: #02356E;
+            padding: 5px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            border: 1px solid #02356E;
+            transition: 0.3s;
+        }
+        .year-link:hover {
+            background-color: #02356E;
+            color: #ffffff;
+        }
+        
+        .back-link { 
+            margin-top: 50px; 
+            display: block; 
+            color: #02356E;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -27,12 +81,23 @@
     </header>
 
     <div class="container">
-        <h2>科目一覧</h2>
-        <ul>
-            <li><a href="https://example.com/kako-mon-link1" target="_blank">微分積分学I（〇〇教授）</a></li>
-            <li><a href="https://example.com/kako-mon-link2" target="_blank">線形代数学I（△△教授）</a></li>
-            <li><a href="#">専門科目A（準備中）</a></li>
-        </ul>
+        
+        <div class="subject-block">
+            <h3>[月1] 線形代数学I（〇〇教授）</h3>
+            <ul>
+                <li><a href="https://example.com/2023" class="year-link" target="_blank">2023年度</a></li>
+                <li><a href="https://example.com/2022" class="year-link" target="_blank">2022年度</a></li>
+                <li><a href="https://example.com/2021" class="year-link" target="_blank">2021年度</a></li>
+            </ul>
+        </div>
+
+        <div class="subject-block">
+            <h3>[火3] 微分積分学I（△△教授）</h3>
+            <ul>
+                <li><a href="#" class="year-link">2023年度</a></li>
+                <li><a href="#" class="year-link">2022年度</a></li>
+            </ul>
+        </div>
 
         <a href="index.html" class="back-link">← トップページに戻る</a>
     </div>
